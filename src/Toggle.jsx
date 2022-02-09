@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import AdditionalInput from "./AdditionalInput";
+import "./Toggle.css"
 
 const Toggle = ({units_gone_count, other_units_gone_count, setUnitsGoneCount, setOtherUnitsGoneCount}) => {
   const [isShow, toggleAdditionalInput] = useState(false);
@@ -8,7 +9,7 @@ const Toggle = ({units_gone_count, other_units_gone_count, setUnitsGoneCount, se
 	
   return(
 		<React.Fragment>
-			<button onClick={handleToggleAdditionalInput}>Additional Input</button>
+			<button onClick={handleToggleAdditionalInput} className="additional-input-button">Additional Input</button>
 			{isShow ?
 				<AdditionalInput 
 					units_gone_count={units_gone_count}

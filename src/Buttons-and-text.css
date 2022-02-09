@@ -1,0 +1,45 @@
+.splitgrid-into3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+}
+
+.splitgrid-into2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items:flex-end;
+    text-align: center;
+}
+
+.up-button{
+	width: 0;
+	height: 0;
+    padding: 0;
+    border-color: transparent;
+    background-color: transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #32557f;
+}
+
+.down-button{
+    width: 0;
+	height: 0;
+    padding: 0;
+    border-color: transparent;
+    background-color: transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #32557f;
+}
+
+.button-title{
+    font-size: medium;
+}
+
+.input-display{
+    font-size: xx-large;
+    margin: 10px;
+}

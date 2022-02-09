@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./AdditionalInput.css";
+import "./Buttons-and-text.css";
 
 
 const AdditionalInput = ({units_gone_count, other_units_gone_count, setUnitsGoneCount, setOtherUnitsGoneCount}) => {
@@ -14,16 +14,16 @@ const AdditionalInput = ({units_gone_count, other_units_gone_count, setUnitsGone
   return(
     <div className="splitgrid-into2">
       <div>
-        <p>Units Gone</p>
-        <button onClick={handleIncrementUnitsGone} className='triangle_button'>Units_gone_up</button>
-        <div className='number_in_button'>{units_gone_count}</div>
-        <button onClick={handleDecrementUnitsGone}>Units_gone_down</button>
+        <div className="button-title">Units Already Sold</div>
+        <button onClick={handleIncrementUnitsGone} className="up-button"></button>
+        <div className="input-display">{units_gone_count}</div>
+        <button onClick={handleDecrementUnitsGone} className="down-button"></button>
       </div>
       <div>
-        <p>Other Units Gone</p>
-        <button onClick={handleIncrementOtherUnitsGone}>Other_units_gone_up</button>
-        <p>{other_units_gone_count}</p>
-        <button onClick={handleDecrementOtherUnitsGone}>Other_units_gone_down</button>
+        <div className="button-title">Other Units Sold with Same Cost</div>
+        <button onClick={handleIncrementOtherUnitsGone} className="up-button"></button>
+        <div className="input-display">{other_units_gone_count}</div>
+        <button onClick={handleDecrementOtherUnitsGone} className="down-button"></button>
       </div>
     </div>
   );

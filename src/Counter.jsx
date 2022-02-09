@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Counter.css';
+import './Buttons-and-text.css';
 
 const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCount, setCostCount}) => {
   
@@ -13,20 +13,23 @@ const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCou
 
   return (
       <div className='splitgrid-into3'>
-        <div>
-          <button onClick={handleIncrementLevel}>Lvl_up</button>
-          <p>{level_count}</p>
-          <button onClick={handleDecrementLevel}>Lvl_down</button>
+        <div className="grid-item">
+          <div className="button-title">Level</div>
+          <button onClick={handleIncrementLevel} className="up-button"></button>
+          <div className="input-display">{level_count}</div>
+          <button onClick={handleDecrementLevel} className="down-button"></button>
         </div>
-        <div>
-          <button onClick={handleIncrementGold}>Gold_up</button>
-          <p>{gold_count}</p>
-          <button onClick={handleDecrementGold}>Gold_down</button>
+        <div className="grid-item">
+          <div className="button-title">Gold</div>
+          <button onClick={handleIncrementGold} className="up-button"></button>
+          <div className="input-display">{gold_count}</div>
+          <button onClick={handleDecrementGold} className="down-button"></button>
         </div>
-        <div>
-          <button onClick={handleIncrementCost}>Champ_cost_up</button>
-          <p>{cost_count}</p>
-          <button onClick={handleDecrementCost}>Champ_cost_down</button>
+        <div className="grid-item">
+          <div className="button-title">Unit Cost</div>
+          <button onClick={handleIncrementCost} className="up-button"></button>
+          <div className="input-display">{cost_count}</div>
+          <button onClick={handleDecrementCost} className="down-button"></button>
         </div>
       </div>
   );

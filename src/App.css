@@ -1,11 +1,14 @@
 .main_body{
-    background-color: rgba(153, 153, 153, 1);
     font-family: sans-serif;
-    max-width: 12cm;
+    /* color is font color */
+    color: white; 
+    max-width: 9cm;
 }
 
 body {
     margin: 0px;
+    margin-top: 0.5cm;
+    background-color: rgb(31, 31, 31);
 }
 
 

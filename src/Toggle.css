@@ -1,0 +1,9 @@
+.additional-input-button{
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: medium;
+    color: rgb(73, 73, 73);
+    text-decoration: underline;
+}

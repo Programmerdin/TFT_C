@@ -1,0 +1,4 @@
+.splitgrid-into2 {
+    display: grid;
+    grid-template-columns: auto auto;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
 import Toggle from "./Toggle";
-import styles from "./App.module.css";
+import "./App.css";
 
 function App() {
   const [level_count, setLevelCount] = useState(8);
@@ -85,10 +85,10 @@ function App() {
     return sum;
   }
 
+  
 
   return (
-    <React.Fragment>
-      <div className={styles.main_body}>
+      <div className='main_body'>
       <Counter
         level_count={level_count}
         gold_count={gold_count}
@@ -113,7 +113,6 @@ function App() {
       <p>8 yones: {p_summed_up_function(8)}</p>
       <p>9 yones: {p_summed_up_function(9)}</p>
       </div>
-    </React.Fragment>
   );
 }
 

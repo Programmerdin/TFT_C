@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Counter.css';
 
 const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCount, setCostCount}) => {
   
@@ -11,8 +12,7 @@ const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCou
   const handleDecrementCost = () => {setCostCount(cost_count - 1);};
 
   return (
-    <React.Fragment>
-      <div>
+      <div className='splitgrid-into3'>
         <div>
           <button onClick={handleIncrementLevel}>Lvl_up</button>
           <p>{level_count}</p>
@@ -29,7 +29,6 @@ const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCou
           <button onClick={handleDecrementCost}>Champ_cost_down</button>
         </div>
       </div>
-    </React.Fragment>
   );
 };
 export default Counter;

@@ -21,7 +21,17 @@
     background-color: transparent;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
-    border-bottom: 50px solid #32557f;
+    border-bottom: 50px solid rgb(180, 180, 180);
+}
+.up-button-invisible{
+    width: 0;
+	height: 0;
+    padding: 0;
+    border-color: transparent;
+    background-color: transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid transparent;
 }
 
 .down-button{
@@ -32,7 +42,28 @@
     background-color: transparent;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
-    border-top: 50px solid #32557f;
+    border-top: 50px solid rgb(180, 180, 180);
+}
+
+.down-button-invisible{
+    width: 0;
+	height: 0;
+    padding: 0;
+    border-color: transparent;
+    background-color: transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid transparent;
+}
+
+.up-button:hover{
+    transition: 0.4s;
+    border-bottom: 50px solid rgb(255, 255, 255);
+}
+
+.down-button:hover{
+    transition: 0.4s;
+    border-top: 50px solid rgb(255, 255, 255);
 }
 
 .button-title{

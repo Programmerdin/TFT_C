@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import AdditionalInput from "./AdditionalInput";
 import "./Toggle.css"
 
-const Toggle = ({units_gone_count, other_units_gone_count, setUnitsGoneCount, setOtherUnitsGoneCount}) => {
+const Toggle = ({units_gone_count, other_units_gone_count, setUnitsGoneCount, setOtherUnitsGoneCount, champ_pool_in_cost, champ_pool_in_unit}) => {
   const [isShow, toggleAdditionalInput] = useState(false);
   const handleToggleAdditionalInput = () => {toggleAdditionalInput(!isShow);};
   
@@ -16,6 +16,8 @@ const Toggle = ({units_gone_count, other_units_gone_count, setUnitsGoneCount, se
 					other_units_gone_count={other_units_gone_count}
 					setUnitsGoneCount={setUnitsGoneCount} 
 					setOtherUnitsGoneCount={setOtherUnitsGoneCount}
+					champ_pool_in_cost={champ_pool_in_cost}
+        			champ_pool_in_unit={champ_pool_in_unit}
 				/>
 			:
 				<div></div>

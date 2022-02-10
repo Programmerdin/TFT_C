@@ -3,7 +3,6 @@ import './Buttons-and-text.css';
 
 const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCount, setCostCount}) => {
   
-
   const handleIncrementLevel = () => {setLevelCount(level_count + 1);};
   const handleDecrementLevel = () => {setLevelCount(level_count - 1);};
   const handleIncrementGold = () => {setGoldCount(gold_count + 1);};
@@ -11,25 +10,53 @@ const Counter = ({level_count, gold_count, cost_count, setLevelCount, setGoldCou
   const handleIncrementCost = () => {setCostCount(cost_count + 1);};
   const handleDecrementCost = () => {setCostCount(cost_count - 1);};
 
+
   return (
       <div className='splitgrid-into3'>
         <div className="grid-item">
           <div className="button-title">Level</div>
-          <button onClick={handleIncrementLevel} className="up-button"></button>
+          {level_count<11 ? 
+            <button onClick={handleIncrementLevel} className="up-button"></button>
+            :
+            <button className="up-button-invisible"></button>
+          }
           <div className="input-display">{level_count}</div>
-          <button onClick={handleDecrementLevel} className="down-button"></button>
+          {level_count>1 ? 
+            <button onClick={handleDecrementLevel} className="down-button"></button>
+            :
+            <button className="down-button-invisible"></button>
+          }
         </div>
+        
         <div className="grid-item">
           <div className="button-title">Gold</div>
-          <button onClick={handleIncrementGold} className="up-button"></button>
+          {gold_count<999 ? 
+            <button onClick={handleIncrementGold} className="up-button"></button>
+            : 
+            <button className="up-button-invisible"></button>
+          }
           <div className="input-display">{gold_count}</div>
-          <button onClick={handleDecrementGold} className="down-button"></button>
+          {gold_count>0 ? 
+            <button onClick={handleDecrementGold} className="down-button"></button>
+            :
+            <button className="down-button-invisible"></button>
+          }
         </div>
+        
         <div className="grid-item">
           <div className="button-title">Unit Cost</div>
-          <button onClick={handleIncrementCost} className="up-button"></button>
+          {cost_count<5 ? 
+            <button onClick={handleIncrementCost} className="up-button"></button>
+            :
+            <button className="up-button-invisible"></button>
+          }
           <div className="input-display">{cost_count}</div>
-          <button onClick={handleDecrementCost} className="down-button"></button>
+          {cost_count>1 ? 
+            <button onClick={handleDecrementCost} className="down-button"></button>
+            :
+            <button className="down-button-invisible"></button>
+          }
+          
         </div>
       </div>
   );

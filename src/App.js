@@ -3,7 +3,6 @@ import Counter from "./Counter";
 import Toggle from "./Toggle";
 import "./App.css";
 import { findAllByDisplayValue } from "@testing-library/react";
-import ProbabilityGraph from "./ProbabilityGraph";
 
 function App() {
   const [level_count, setLevelCount] = useState(8);
@@ -127,6 +126,8 @@ function App() {
       <p>8: {p_summed_array[7]}%</p>
       <p>9: {p_summed_array[8]}%</p>
     </div>
+
+
   );
 }
 
